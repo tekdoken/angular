@@ -9,6 +9,8 @@ export class FontSizeEditorComponent implements OnInit {
   fontSize = 14;
   constructor() { }
 
+
   ngOnInit() {
   }
+
 }
