@@ -16,6 +16,8 @@ import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FormComponent } from './form/form.component';
 import { FormproductComponent } from './formproduct/formproduct.component';
+import { RatingBarComponent } from './rating-bar/rating-bar.component';
+import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -33,7 +35,9 @@ import { FormproductComponent } from './formproduct/formproduct.component';
     NameCardComponent,
     ProgressBarComponent,
     FormComponent,
-    FormproductComponent
+    FormproductComponent,
+    RatingBarComponent,
+    CountdownTimerComponent
   ],
   imports: [
     BrowserModule,
