@@ -13,7 +13,10 @@ import { PromiseComponent } from './promise/promise.component';
 import { ArticleComponent } from './article/article.component';
 import { LikeComponent } from './like/like.component';
 import { NameCardComponent } from './name-card/name-card.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { FormComponent } from './form/form.component';
 
+// @ts-ignore
 // @ts-ignore
 @NgModule({
   declarations: [
@@ -26,12 +29,15 @@ import { NameCardComponent } from './name-card/name-card.component';
     PromiseComponent,
     ArticleComponent,
     LikeComponent,
-    NameCardComponent
+    NameCardComponent,
+    ProgressBarComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    // ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
