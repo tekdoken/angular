@@ -37,7 +37,7 @@ import { FormComponent } from './form/form.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    // ReactiveFormsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
