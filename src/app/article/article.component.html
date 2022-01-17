@@ -1,7 +1,7 @@
 <h2>Today's article</h2>
 <hr>
 <div *ngFor="let art of articles">
-  <a href="{{art.url}}" target="_blank">{{art.title}}</a>: <app-like></app-like>
+  <a href="{{art.url}}" target="_blank">{{art.title|uppercase}}</a>: <app-like></app-like>
   <div>
     <h2>Article Information</h2>
     <table>
