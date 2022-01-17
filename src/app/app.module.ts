@@ -10,6 +10,8 @@ import { ProductComponent } from './product/product.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ColorComponent } from './color/color.component';
 import { PromiseComponent } from './promise/promise.component';
+import { ArticleComponent } from './article/article.component';
+import { LikeComponent } from './like/like.component';
 
 // @ts-ignore
 @NgModule({
@@ -20,7 +22,9 @@ import { PromiseComponent } from './promise/promise.component';
     ProductComponent,
     CalculatorComponent,
     ColorComponent,
-    PromiseComponent
+    PromiseComponent,
+    ArticleComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
