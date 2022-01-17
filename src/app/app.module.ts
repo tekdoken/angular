@@ -12,6 +12,7 @@ import { ColorComponent } from './color/color.component';
 import { PromiseComponent } from './promise/promise.component';
 import { ArticleComponent } from './article/article.component';
 import { LikeComponent } from './like/like.component';
+import { NameCardComponent } from './name-card/name-card.component';
 
 // @ts-ignore
 @NgModule({
@@ -24,7 +25,8 @@ import { LikeComponent } from './like/like.component';
     ColorComponent,
     PromiseComponent,
     ArticleComponent,
-    LikeComponent
+    LikeComponent,
+    NameCardComponent
   ],
   imports: [
     BrowserModule,
