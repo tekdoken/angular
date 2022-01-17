@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontSizeEditorComponent } from './font-size-editor/font-size-editor.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { PetComponent } from './pet/pet.component';
 import { ProductComponent } from './product/product.component';
 import { CalculatorComponent } from './calculator/calculator.component';
@@ -15,6 +15,7 @@ import { LikeComponent } from './like/like.component';
 import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FormComponent } from './form/form.component';
+import { FormproductComponent } from './formproduct/formproduct.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -31,7 +32,8 @@ import { FormComponent } from './form/form.component';
     LikeComponent,
     NameCardComponent,
     ProgressBarComponent,
-    FormComponent
+    FormComponent,
+    FormproductComponent
   ],
   imports: [
     BrowserModule,

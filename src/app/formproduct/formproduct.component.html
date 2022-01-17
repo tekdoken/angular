@@ -1,0 +1,11 @@
+<div *ngFor="let pro of listProduct">
+  <h1>{{pro.id}}</h1>
+  <h1>{{pro.name}}</h1>
+  <h1>{{pro.price}}</h1>
+</div>
+<form [formGroup]="form" (submit)="cre()">
+  <input type="text" formControlName="id">
+  <input type="text" formControlName="name">
+  <input type="text" formControlName="price">
+  <button>submit</button>
+</form>
