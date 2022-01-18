@@ -21,6 +21,7 @@ import { CountdownTimerComponent } from './countdown-timer/countdown-timer.compo
 import { TodoComponent } from './todo/todo.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { TimelinesComponent } from './timelines/timelines.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -43,7 +44,8 @@ import { LoginComponent } from './login/login.component';
     CountdownTimerComponent,
     TodoComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    TimelinesComponent
   ],
   imports: [
     BrowserModule,
