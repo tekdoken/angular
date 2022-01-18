@@ -18,6 +18,7 @@ import { FormComponent } from './form/form.component';
 import { FormproductComponent } from './formproduct/formproduct.component';
 import { RatingBarComponent } from './rating-bar/rating-bar.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import { TodoComponent } from './todo/todo.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -37,7 +38,8 @@ import { CountdownTimerComponent } from './countdown-timer/countdown-timer.compo
     FormComponent,
     FormproductComponent,
     RatingBarComponent,
-    CountdownTimerComponent
+    CountdownTimerComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
