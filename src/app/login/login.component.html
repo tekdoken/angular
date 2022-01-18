@@ -1,0 +1,27 @@
+<form [formGroup]="form" (submit)="save()">
+  email <input type="text" formControlName="email">
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="form.controls['email'].errors?.['required']
+         && form.controls['email'].touched">
+    Email is required!
+  </div>
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="form.controls['email'].errors?.['email']
+         && form.controls['email'].touched">
+    Email invalid!
+  </div>
+  <br>
+
+
+  password <input type="text" formControlName="password">
+  <div class="col alert alert-danger" role="alert"
+       *ngIf=" form.controls['password'].touched  && form.controls['password'].errors?.['required'] ">
+    Password is required!
+  </div>
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="form.controls['password'].errors?.['minlength']
+         && form.controls['password'].touched ">Password length is greater than 6!
+  </div>
+  <br>
+  <button class="btn btn-info" type="submit" [disabled]="!form.valid">Submit</button>
+</form>

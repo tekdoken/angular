@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
 })
   country=["VN","USA","JP"]
   save(){
-    alert("afad")
+    alert("register ")
   console.log(this.form.value);
   }
   constructor() { }

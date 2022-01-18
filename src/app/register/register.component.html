@@ -6,9 +6,9 @@
     Email is required!
   </div>
   <div class="col alert alert-danger" role="alert"
-       *ngIf="form.controls['email'].errors?.['required']
+       *ngIf="form.controls['email'].errors?.['email']
          && form.controls['email'].touched">
-    Email is required!
+    Email invalid!
   </div>
   <br>
 
