@@ -23,6 +23,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { TimelinesComponent } from './timelines/timelines.component';
 import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
+import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -47,7 +48,8 @@ import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.co
     RegisterComponent,
     LoginComponent,
     TimelinesComponent,
-    YoutubePlaylistComponent
+    YoutubePlaylistComponent,
+    YoutubePlayerComponent
   ],
   imports: [
     BrowserModule,
