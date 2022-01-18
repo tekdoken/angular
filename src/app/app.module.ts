@@ -29,8 +29,6 @@ import { ProductCreateComponent } from './product/product-create/product-create.
 import { DictionaryListComponent } from './dictionary/dictionary-list/dictionary-list.component';
 import { DictionaryDetailComponent } from './dictionary/dictionary-detail/dictionary-detail.component';
 
-// @ts-ignore
-// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,

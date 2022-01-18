@@ -1,1 +1,7 @@
-<p>dictionary-list works!</p>
+<ul>
+  <li *ngFor="let w of dictionary">
+    <a [routerLink]="['/dictionary', w.word]">{{w.word}}</a>
+  </li>
+</ul>
+
+<div><router-outlet></router-outlet></div>

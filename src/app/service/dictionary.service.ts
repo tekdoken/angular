@@ -23,7 +23,7 @@ getAll(){
     return this.dictionary;
 }
 tran(word:string){
-    this.dictionary.find(item=>item.word==word);
+   return this.dictionary.find(item=>item.word===word);
 }
   constructor() {
   }

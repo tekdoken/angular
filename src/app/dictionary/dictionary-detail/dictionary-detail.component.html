@@ -1,1 +1,8 @@
-<p>dictionary-detail works!</p>
+<div *ngIf="wordEng ; else no">
+  <h2>Word: {{wordEng.word}}</h2>
+  <h2>Mean: {{wordEng.mean}}</h2>
+</div>
+<ng-template #no>
+  <h2> Not Item
+  </h2>
+</ng-template>
