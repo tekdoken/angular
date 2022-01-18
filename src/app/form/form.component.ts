@@ -8,8 +8,8 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class FormComponent implements OnInit {
   form = new FormGroup({
-    name :new FormControl(),
-    age :new FormControl()
+    name: new FormControl(),
+    age: new FormControl()
   })
 
   constructor() {
@@ -17,7 +17,8 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-dis(){
+
+  dis() {
     console.log(this.form.value);
-}
+  }
 }

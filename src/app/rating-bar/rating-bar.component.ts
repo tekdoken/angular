@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output, SimpleChanges} from '@angular/core';
-import {IRatingUnit} from "../IRatingUnit";
+import {IRatingUnit} from "../model/IRatingUnit";
 
 @Component({
   selector: 'app-rating-bar',

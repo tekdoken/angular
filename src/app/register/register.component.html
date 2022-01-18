@@ -1,0 +1,72 @@
+<form [formGroup]="form" (submit)="save()">
+  email <input type="text" formControlName="email">
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="form.controls['email'].errors?.['required']
+         && form.controls['email'].touched">
+    Email is required!
+  </div>
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="form.controls['email'].errors?.['required']
+         && form.controls['email'].touched">
+    Email is required!
+  </div>
+  <br>
+
+
+  password <input type="text" formControlName="password">
+  <div class="col alert alert-danger" role="alert"
+       *ngIf=" form.controls['password'].touched  && form.controls['password'].errors?.['required'] ">
+    Password is required!
+  </div>
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="form.controls['password'].errors?.['minlength']
+         && form.controls['password'].touched ">Password length is greater than 6!
+  </div>
+  <br>
+  confirm password <input type="text" formControlName="passwordCom">
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="form.controls['passwordCom'].value != form.controls['password'].value
+         && form.controls['passwordCom'].touched">
+    Confirm Password doesnt match
+  </div>
+  <br>
+
+
+
+  country
+  <select formControlName="country">
+    <option *ngFor="let c of country" [value]="c">{{c}}</option>
+  </select>   <div class="col alert alert-danger" role="alert"
+                   *ngIf="form.controls['country'].errors?.['required']
+         && form.controls['country'].touched">
+  Country is required!
+</div><br>
+
+
+  age <input type="number" formControlName="age">
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="form.controls['age'].errors?.['required']
+         && form.controls['age'].touched">
+    Age is required!
+  </div>
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="form.controls['age'].errors?.['min']
+         && form.controls['age'].touched">
+    Age is greater than 16!
+  </div>
+  <br>
+  gender<br>
+  <div><input type="radio" formControlName="gender" value="female"> <label>female</label><br>
+    <input type="radio" formControlName="gender" value="male"> <label>male</label></div>
+  phone<input type="text" formControlName="phone"> <div class="col alert alert-danger" role="alert"
+                                                        *ngIf="form.controls['phone'].errors?.['required']
+         && form.controls['phone'].touched">
+  Phone is required!
+</div>
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="form.controls['phone'].errors?.['pattern']
+         && form.controls['phone'].touched">
+    Invalid Phone Number
+  </div><br>
+  <button class="btn btn-info" type="submit" [disabled]="!form.valid">Submit</button>
+</form>
