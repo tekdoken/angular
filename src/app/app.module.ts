@@ -26,6 +26,9 @@ import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.co
 import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
+import { DictionaryComponent } from './dictionary/dictionary.component';
+import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail.component';
+import { DictionaryListComponent } from './dictionary/dictionary-list/dictionary-list.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -53,7 +56,10 @@ import { ProductCreateComponent } from './product/product-create/product-create.
     YoutubePlaylistComponent,
     YoutubePlayerComponent,
     ProductListComponent,
-    ProductCreateComponent
+    ProductCreateComponent,
+    DictionaryComponent,
+    DictionaryDetailComponent,
+    DictionaryListComponent
   ],
   imports: [
     BrowserModule,
