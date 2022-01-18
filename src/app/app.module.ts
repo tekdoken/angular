@@ -22,6 +22,7 @@ import { TodoComponent } from './todo/todo.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { TimelinesComponent } from './timelines/timelines.component';
+import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -45,7 +46,8 @@ import { TimelinesComponent } from './timelines/timelines.component';
     TodoComponent,
     RegisterComponent,
     LoginComponent,
-    TimelinesComponent
+    TimelinesComponent,
+    YoutubePlaylistComponent
   ],
   imports: [
     BrowserModule,
