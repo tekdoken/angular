@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {HouseService} from "../../service/house.service";
-import {ActivatedRoute, Route, Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {House} from "../../model/house";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {Category} from "../../model/category";
 
 @Component({
   selector: 'app-house-update',
@@ -10,15 +11,18 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./house-update.component.css']
 })
 export class HouseUpdateComponent implements OnInit {
-  house: House={name:"",bathroom:""};
+  house: House = {name: "", bathroom: ""};
+  category: Category[] = [];
+  ca!: Category;
 
-  constructor(private houseService: HouseService, private activatedRoute: ActivatedRoute,private router: Router
+  constructor(private houseService: HouseService, private activatedRoute: ActivatedRoute, private router: Router
     , private form: FormBuilder) {
   }
 
   editHouseForm: FormGroup = this.form.group({
     name: new FormControl('', Validators.required),
-    bathroom: new FormControl('', Validators.required)
+    bathroom: new FormControl('', Validators.required),
+    category: new FormControl()
   })
 
   ngOnInit(): void {
@@ -27,13 +31,23 @@ export class HouseUpdateComponent implements OnInit {
       this.houseService.findById(id).subscribe(res => {
         this.house = res;
       })
+      this.houseService.getAllCategory().subscribe(cate=>{
+        this.category=cate;
+      })
     })
   }
 
   saveUpdate() {
     const house = this.editHouseForm.value;
+    if (house.category==null){
+      house.category=this.house.category?.id
+    }
+    this.ca={
+      id:house.category
+    }
+    house.category=this.ca;
     // @ts-ignore
-    this.houseService.update(this.house.id,house).subscribe();
+    this.houseService.update(this.house.id, house).subscribe();
     this.router.navigate(["/house"])
   }
 }

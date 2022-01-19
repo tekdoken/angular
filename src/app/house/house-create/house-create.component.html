@@ -1,0 +1,8 @@
+<form [formGroup]="createHouseForm" (ngSubmit)="saveUpdate()" >
+  <input type="text" formControlName="name" [(ngModel)]="house.name">
+  <input type="text" formControlName="bathroom" [(ngModel)]="house.bathroom">
+  <select formControlName="category">
+    <option *ngFor="let ca of category" value="{{ca.id}}">{{ca.name}}</option>
+  </select>
+  <button type="submit">Save</button>
+</form>

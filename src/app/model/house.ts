@@ -1,4 +1,5 @@
-import {Category} from "../category";
+import {Category} from "./category";
+
 
 export interface House {
 id?:string;

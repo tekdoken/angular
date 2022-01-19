@@ -3,12 +3,14 @@
   <tr>
     <td>id</td>
     <td>name</td>
-    <td>price</td>
+    <td>bathroom</td>
+    <td>category</td>
   </tr>
   <tr *ngFor="let product of houses; index as i">
     <td>{{product.id}}</td>
     <td>{{product.name}}</td>
     <td>{{product.bathroom}}</td>
+    <td>{{product.category?.name}}</td>
     <button (click)="delete(product.id)">delete</button>
     <td> <a [routerLink]="['/updatehouse', product.id]">update</a></td>
   </tr>

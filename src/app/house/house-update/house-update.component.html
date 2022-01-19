@@ -1,5 +1,9 @@
 <form [formGroup]="editHouseForm" (ngSubmit)="saveUpdate()" >
   <input type="text" formControlName="name" [(ngModel)]="house.name">
   <input type="text" formControlName="bathroom" [(ngModel)]="house.bathroom">
+  <select formControlName="category">
+    <option [value]="null">{{house.category?.name}}</option>
+    <option *ngFor="let c of category" [value]="c.id">{{c?.name}}</option>
+  </select>
   <button type="submit">update</button>
 </form>
