@@ -1,0 +1,5 @@
+<form [formGroup]="editHouseForm" (ngSubmit)="saveUpdate()" >
+  <input type="text" formControlName="name" [(ngModel)]="house.name">
+  <input type="text" formControlName="bathroom" [(ngModel)]="house.bathroom">
+  <button type="submit">update</button>
+</form>

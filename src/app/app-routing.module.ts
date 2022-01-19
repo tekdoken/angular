@@ -8,17 +8,30 @@ import {ProductCreateComponent} from "./product/product-create/product-create.co
 import {DictionaryListComponent} from "./dictionary/dictionary-list/dictionary-list.component";
 import {DictionaryDetailComponent} from "./dictionary/dictionary-detail/dictionary-detail.component";
 import {ProductUpdateComponent} from "./product/product-update/product-update.component";
+import {HouseListComponent} from "./house/house-list/house-list.component";
+import {HouseUpdateComponent} from "./house/house-update/house-update.component";
+import {HouseCreateComponent} from "./house/house-create/house-create.component";
 
 const routes: Routes = [{
   path: 'dictionary',
   component: DictionaryListComponent,
-  children:[{
-    path:'word',
+  children: [{
+    path: 'word',
     component: DictionaryDetailComponent
   }]
 }, {
   path: 'timelines',
   component: TimelinesComponent
+}, {
+  path: 'house',
+  component: HouseListComponent
+}, {
+  path: 'housecreate',
+  component: HouseCreateComponent
+},
+  {
+  path: 'updatehouse/:id',
+  component: HouseUpdateComponent
 }, {
   path: 'youtube',
   component: YoutubePlaylistComponent, children: [{
@@ -30,15 +43,15 @@ const routes: Routes = [{
   component: ProductListComponent
 },
   {
-  path: 'product/update',
-  children:[{
+    path: 'product/update',
+    children: [{
       path: ':id',
       component: ProductUpdateComponent
     }]
-}, {
-  path: 'product/create',
-  component: ProductCreateComponent
-}
+  }, {
+    path: 'product/create',
+    component: ProductCreateComponent
+  }
 ];
 
 @NgModule({

@@ -1,0 +1,15 @@
+<h1>Danh sách sản phẩm</h1>
+<table>
+  <tr>
+    <td>id</td>
+    <td>name</td>
+    <td>price</td>
+  </tr>
+  <tr *ngFor="let product of houses; index as i">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.bathroom}}</td>
+    <button (click)="delete(product.id)">delete</button>
+    <td> <a [routerLink]="['/updatehouse', product.id]">update</a></td>
+  </tr>
+</table>

@@ -29,6 +29,10 @@ import { ProductCreateComponent } from './product/product-create/product-create.
 import { DictionaryListComponent } from './dictionary/dictionary-list/dictionary-list.component';
 import { DictionaryDetailComponent } from './dictionary/dictionary-detail/dictionary-detail.component';
 import { ProductUpdateComponent } from './product/product-update/product-update.component';
+import {HttpClientModule} from "@angular/common/http";
+import { HouseListComponent } from './house/house-list/house-list.component';
+import { HouseUpdateComponent } from './house/house-update/house-update.component';
+import { HouseCreateComponent } from './house/house-create/house-create.component';
 
 @NgModule({
   declarations: [
@@ -57,13 +61,17 @@ import { ProductUpdateComponent } from './product/product-update/product-update.
     ProductCreateComponent,
     DictionaryListComponent,
     DictionaryDetailComponent,
-    ProductUpdateComponent
+    ProductUpdateComponent,
+    HouseListComponent,
+    HouseUpdateComponent,
+    HouseCreateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
