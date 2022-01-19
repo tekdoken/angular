@@ -7,6 +7,7 @@ import {ProductListComponent} from "./product/product-list/product-list.componen
 import {ProductCreateComponent} from "./product/product-create/product-create.component";
 import {DictionaryListComponent} from "./dictionary/dictionary-list/dictionary-list.component";
 import {DictionaryDetailComponent} from "./dictionary/dictionary-detail/dictionary-detail.component";
+import {ProductUpdateComponent} from "./product/product-update/product-update.component";
 
 const routes: Routes = [{
   path: 'dictionary',
@@ -27,6 +28,13 @@ const routes: Routes = [{
 }, {
   path: 'product/list',
   component: ProductListComponent
+},
+  {
+  path: 'product/update',
+  children:[{
+      path: ':id',
+      component: ProductUpdateComponent
+    }]
 }, {
   path: 'product/create',
   component: ProductCreateComponent
@@ -39,4 +47,3 @@ const routes: Routes = [{
 })
 export class AppRoutingModule {
 }
-// https://1fichier.com/?vdzp3s00luoohfni3oug

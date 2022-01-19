@@ -38,5 +38,14 @@ export class ProductService {
   saveProduct(product) {
     this.products.push(product);
   }
+  delete(id:number){
+    for (let i = 0; i < this.products.length; i++) {
+      if (this.products[i].id==id)
+        this.products.splice(i,1)
+    }
+  }
+  findById(id: any) {
+    return this.products.find(item => item.id == id)
+  }
   constructor() { }
 }

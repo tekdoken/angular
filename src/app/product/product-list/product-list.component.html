@@ -11,5 +11,7 @@
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
+    <button (click)="delete(product.id)">delete</button>
+   <td> <a [routerLink]="['/product/update', product.id]">update</a></td>
   </tr>
 </table>

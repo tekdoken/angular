@@ -28,6 +28,7 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { DictionaryListComponent } from './dictionary/dictionary-list/dictionary-list.component';
 import { DictionaryDetailComponent } from './dictionary/dictionary-detail/dictionary-detail.component';
+import { ProductUpdateComponent } from './product/product-update/product-update.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { DictionaryDetailComponent } from './dictionary/dictionary-detail/dictio
     ProductListComponent,
     ProductCreateComponent,
     DictionaryListComponent,
-    DictionaryDetailComponent
+    DictionaryDetailComponent,
+    ProductUpdateComponent
   ],
   imports: [
     BrowserModule,

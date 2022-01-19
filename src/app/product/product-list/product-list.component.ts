@@ -14,6 +14,11 @@ products: Product[]=[];
   ngOnInit(): void {
     this.getAll();
   }
+  delete(id:any){
+    // @ts-ignore
+     this.products=this.productService.delete(id);
+    this.getAll()
+  }
 getAll(){
      this.products=this.productService.getAll();
 }

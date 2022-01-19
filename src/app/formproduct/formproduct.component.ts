@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Product} from "../model/producct";
+import {Product} from "../model/product";
 import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
