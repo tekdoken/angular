@@ -14,7 +14,7 @@ export class HouseUpdateComponent implements OnInit {
   house: House = {name: "", bathroom: ""};
   category: Category[] = [];
   ca!: Category;
-
+time!:boolean;
   constructor(private houseService: HouseService, private activatedRoute: ActivatedRoute, private router: Router
     , private form: FormBuilder) {
   }
@@ -30,6 +30,8 @@ export class HouseUpdateComponent implements OnInit {
       const id = paramap.get('id');
       this.houseService.findById(id).subscribe(res => {
         this.house = res;
+        // @ts-ignore
+        this.ca=res.category?.id;
       })
       this.houseService.getAllCategory().subscribe(cate=>{
         this.category=cate;
@@ -39,15 +41,23 @@ export class HouseUpdateComponent implements OnInit {
 
   saveUpdate() {
     const house = this.editHouseForm.value;
-    if (house.category==null){
-      house.category=this.house.category?.id
-    }
+    // if (house.category==null){
+    //   house.category=this.house.category?.id
+    // }
     this.ca={
       id:house.category
     }
     house.category=this.ca;
     // @ts-ignore
     this.houseService.update(this.house.id, house).subscribe();
-    this.router.navigate(["/house"])
+    // @ts-ignore
+    this.time=setInterval(() => {
+    this.router.navigate(["/house"])}, 70);
+  }
+  ngOnDestroy() {
+    if (this.time) {
+      // @ts-ignore
+      clearInterval(this.time);
+    }
   }
 }
